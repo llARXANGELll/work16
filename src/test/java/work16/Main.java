@@ -35,7 +35,12 @@ public class Main {
         clickMe.click();
         String excellent = webDriver.findElement(By.xpath("//label[.=\"Excellent!\"]")).getText();
         Assert.assertEquals("Excellent!", excellent);
-
+        WebElement cl = webDriver.findElement(By.className("button-primary"));
+        cl.click();
+        WebElement cll = webDriver.findElement(By.linkText("Great! Return to menu"));
+        cll.click();
+        WebElement checkbox = webDriver.findElement(By.id("checkbox"));
+        checkbox.click();
 
     }
 
