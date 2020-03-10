@@ -13,6 +13,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
+import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
 public class Main {
@@ -21,8 +22,8 @@ public class Main {
 
     @Before
     public void setup(){
-        WebDriverManager.edgedriver().setup();;
-        webDriver = new EdgeDriver();
+        WebDriverManager.chromedriver().setup();
+        webDriver = new ChromeDriver();
     }
     @Test
     public void savkk() {
@@ -32,8 +33,9 @@ public class Main {
         input.click();
         WebElement clickMe = webDriver.findElement(By.id("first"));
         clickMe.click();
-        webDriver.findElement(By.linkText("Excellent!")).getSize();
-//        Assert.assertEquals(webDriver.get(By.linkText("//label[.=\"Excellent!\"]")));
+        String excellent = webDriver.findElement(By.xpath("//label[.=\"Excellent!\"]")).getText();
+        Assert.assertEquals("Excellent!", excellent);
+
 
     }
 
