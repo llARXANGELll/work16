@@ -33,7 +33,7 @@ public class Main {
         WebElement clickMe = webDriver.findElement(By.id("first"));
         clickMe.click();
         webDriver.findElement(By.linkText("Excellent!")).getSize();
-//        Assert.assertEquals(webDriver.get(By.linkText('//label[.="Excellent!"]')));
+//        Assert.assertEquals(webDriver.get(By.linkText("//label[.=\"Excellent!\"]")));
 
     }
 
