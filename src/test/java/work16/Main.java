@@ -10,6 +10,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 
 import java.util.concurrent.TimeUnit;
 
@@ -19,16 +20,16 @@ public class Main {
 
     @Before
     public void setup(){
-        WebDriverManager.chromedriver().setup();
-        webDriver = new ChromeDriver();
+        WebDriverManager.edgedriver().setup();;
+        webDriver = new EdgeDriver();
     }
     @Test
     public void yandexx() {
         webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        webDriver.get("https://yandex.com/ncr");
-        WebElement input = webDriver.findElement(By.name("text"));
-        input.sendKeys("руддщ цкщдв", Keys.ENTER);
-        webDriver.findElement(By.xpath("//div[.=\"Hello, world!\"]"));
+        webDriver.get("https://savkk.github.io/selenium-practice/ ");
+        WebElement input = webDriver.findElement(By.id("button"));
+        input.click();
+        webDriver.findElement(By.xpath("//button[.=\"Click me!\"]"));
 
     }
 
