@@ -24,7 +24,7 @@ public class Main {
         webDriver = new EdgeDriver();
     }
     @Test
-    public void yandexx() {
+    public void savkk() {
         webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         webDriver.get("https://savkk.github.io/selenium-practice/ ");
         WebElement input = webDriver.findElement(By.id("button"));
