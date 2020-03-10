@@ -25,7 +25,7 @@ public class Main {
     @Test
     public void yandexx() {
         webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        webDriver.get("https://yandex.com/ncr");
+        webDriver.get("https://yandex.com");
         WebElement input = webDriver.findElement(By.name("text"));
         input.sendKeys("руддщ цкщдв", Keys.ENTER);
         webDriver.findElement(By.xpath("//div[.=\"Hello, world!\"]"));
