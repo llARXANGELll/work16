@@ -36,8 +36,6 @@ public class Main {
         webDriver.findElement(By.className("button-primary")).click();
         webDriver.findElement(By.linkText("Great! Return to menu")).click();
         webDriver.findElement(By.id("checkbox")).click();
-
-
         webDriver.findElement(By.id("two")).click();
         webDriver.findElement(By.id("go")).click();
         String result = webDriver.findElement(By.xpath("//label[.=\" two\"]")).getText();
