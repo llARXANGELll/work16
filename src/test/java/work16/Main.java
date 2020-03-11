@@ -38,6 +38,18 @@ public class Main {
         webDriver.findElement(By.id("checkbox")).click();
 
 
+        webDriver.findElement(By.id("two")).click();
+        webDriver.findElement(By.id("go")).click();
+        WebElement result = webDriver.findElement(By.id("result"));
+        Assert.assertEquals("two", result);
+        webDriver.findElement(By.id("redio_one")).click();
+        webDriver.findElement(By.id("radio_go")).click();
+        WebElement radio_result = webDriver.findElement(By.id("radio_result"));
+        Assert.assertEquals("one", radio_result);
+        String text = webDriver.findElement(By.xpath("//label[.=\"Great! Return to menu\"]")).getText();
+        Assert.assertEquals("Great! Return to menu", text);
+        webDriver.findElement(By.id("black")).click();
+
     }
 
     @After
