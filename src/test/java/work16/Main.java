@@ -40,7 +40,7 @@ public class Main {
 
         webDriver.findElement(By.id("two")).click();
         webDriver.findElement(By.id("go")).click();
-        WebElement result = webDriver.findElement(By.xpath("//label[.=\"two\"]"));
+        String result = webDriver.findElement(By.xpath("//label[.=\"two\"]")).getText();
         Assert.assertEquals("two", result);
         webDriver.findElement(By.id("redio_one")).click();
         webDriver.findElement(By.id("radio_go")).click();
