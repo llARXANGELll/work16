@@ -29,18 +29,14 @@ public class Main {
     public void savkk() {
         webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         webDriver.get("https://savkk.github.io/selenium-practice/ ");
-        WebElement input = webDriver.findElement(By.id("button"));
-        input.click();
-        WebElement clickMe = webDriver.findElement(By.id("first"));
-        clickMe.click();
+        webDriver.findElement(By.id("button")).click();
+        webDriver.findElement(By.id("first")).click();
         String excellent = webDriver.findElement(By.xpath("//label[.=\"Excellent!\"]")).getText();
         Assert.assertEquals("Excellent!", excellent);
-        WebElement cl = webDriver.findElement(By.className("button-primary"));
-        cl.click();
-        WebElement cll = webDriver.findElement(By.linkText("Great! Return to menu"));
-        cll.click();
-        WebElement checkbox = webDriver.findElement(By.id("checkbox"));
-        checkbox.click();
+        webDriver.findElement(By.className("button-primary")).click();
+        webDriver.findElement(By.linkText("Great! Return to menu")).click();
+        webDriver.findElement(By.id("checkbox")).click();
+
 
     }
 
