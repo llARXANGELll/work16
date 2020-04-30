@@ -17,10 +17,11 @@ public class MainTest {
     private WebDriver webDriver;
 
     @BeforeTest
-    public void setup(){
+    public void setup() {
         WebDriverManager.chromedriver().setup();
         webDriver = new ChromeDriver();
     }
+
     @Test
     public void savkk() {
         webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
